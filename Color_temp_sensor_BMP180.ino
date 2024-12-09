@@ -43,6 +43,7 @@ Adafruit_BMP085 bmp;
 void setup() {
   Serial.begin(115200);
   Wire.begin();
+  delay(500); // give serial some time to start....
   
   if (!bmp.begin()) {
     Serial.println("Could not find a valid BMP085/BMP180 sensor, check wiring!");
